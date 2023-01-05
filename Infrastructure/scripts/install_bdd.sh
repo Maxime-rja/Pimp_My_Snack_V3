@@ -37,9 +37,8 @@ if [ -f "$DBFILE" ] ;then
   >> $LOG_FILE 2>&1
 fi
 
+
 echo "Changing localhost to 0.0.0.0"
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 
 echo "END - install MariaDB"
-
-
