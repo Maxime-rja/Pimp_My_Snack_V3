@@ -32,7 +32,7 @@ php /var/www/html/moodle/admin/cli/install.php \
   --wwwroot="http://192.168.56.80/moodle" \
   --dataroot="/var/www/data" \
   --dbtype="mariadb" \
-  --dbhost="" \
+  --dbhost="192.168.56.81" \
   --dbuser="moodle_user" \
   --dbpass="network" \
   --dbname="moodle" \
