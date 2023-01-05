@@ -1,3 +1,5 @@
+//Classe Ingrédients
+
 public class Ingredients {
     // champs ou attributs de la classe
     private String nom;
@@ -36,20 +38,21 @@ public class Ingredients {
         return this.quantité;
     }
 
-    // Ajouter des ingrédients dans le stock
+    // Ajouter des quantités pour un ingrédient dans le stock
     public int ajouterQuantiteIngredient(int nombre)
     {
         System.out.println("Ajout de " + nombre + " " + this.getNomIngredient() + " dans la reserve.");
         return this.quantité += nombre;
     }
 
-     // Ajouter des ingrédients dans le stock
+     // Retirer des quantités pour un ingrédient dans le stock
      public int retirerQuantiteIngredient(int nombre)
      {
          System.out.println("Retrait de " + nombre + " " + this.getNomIngredient() + " dans la reserve.");
          return this.quantité -= nombre;
      }
 
+     // Afficher la quantité restante d'un ingrédient
     public String toString()
     {
         return "Il reste " + this.getQuantiteIngredient() + " " + this.getNomIngredient() + " dans la réserve.";

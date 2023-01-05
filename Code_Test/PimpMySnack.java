@@ -9,15 +9,5 @@ public class PimpMySnack
         stockage.afficherListeIngredient();
         stockage.tomate.retirerQuantiteIngredient(30);
         stockage.afficherListeIngredient();
-
-
-        /* 
-        tomate.ajouterQuantiteIngredient(15);
-        System.out.println(tomate.toString());
-
-        tomate.retirerQuantiteIngredient(10);
-        System.out.println(tomate.toString());
-        */
-
     }
 }

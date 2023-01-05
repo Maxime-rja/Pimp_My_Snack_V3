@@ -13,6 +13,8 @@ public class Inventaire {
     Ingredients poulet;
     Ingredients bacon;
 
+    // Constructeur de l'inventaire
+    // Création des différents ingrédients et leur ajout dans la liste d'ingrédients
     public Inventaire()
 	{
         this.pain = new Ingredients("Pain", 0.5, 20);
@@ -38,11 +40,13 @@ public class Inventaire {
         this.ajouterIngredient(bacon);
 	}
 
+    // Ajouter un ingrédient dans la liste d'ingrédient de l'inventaire
     public void ajouterIngredient(Ingredients ingredient)
 	{
 		listeIngredients.add(ingredient);
 	}
 
+    // Afficher la liste des ingrédients dans l'inventaire
     public void afficherListeIngredient()
 	{
 		for(int i=0; i<listeIngredients.size(); i++)
