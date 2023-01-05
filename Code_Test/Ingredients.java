@@ -1,5 +1,3 @@
-//Classe Ingrédients
-
 public class Ingredients {
     // champs ou attributs de la classe
     private String nom;
