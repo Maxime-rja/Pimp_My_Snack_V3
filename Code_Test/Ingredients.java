@@ -25,7 +25,7 @@ public class Ingredients {
     }
 
     // Prix de l'ingrédient
-    public double getPrixIngredeient () {
+    public double getPrixIngredient () {
         // code de la méthode
         return this.prix;
     }

@@ -47,7 +47,7 @@ public class Inventaire {
 	}
 
     // Afficher la liste des ingrédients dans l'inventaire
-    public void afficherListeIngredient()
+    public void afficherListeIngredientInventaire()
 	{
 		for(int i=0; i<listeIngredients.size(); i++)
 		{
@@ -55,7 +55,6 @@ public class Inventaire {
 		}
 	}
 
-    /*
     public Ingredients getIngredientByName(String ingredient)
     {
         Ingredients ingredientCherche = new Ingredients();
@@ -78,5 +77,5 @@ public class Inventaire {
             // ERROR
             return null;
         }
-    }*/
+    }
 }
