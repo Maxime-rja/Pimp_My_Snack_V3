@@ -41,4 +41,7 @@ fi
 echo "Changing localhost to 0.0.0.0"
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 
+systemctl restart mariadb
+
+
 echo "END - install MariaDB"
