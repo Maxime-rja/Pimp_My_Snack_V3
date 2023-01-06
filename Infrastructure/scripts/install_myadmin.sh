@@ -43,9 +43,8 @@ sed -e "s|cfg\['blowfish_secret'\] = ''|cfg['blowfish_secret'] = '$randomBlowfis
   ${WWW_REP}/myadmin/config.sample.inc.php \
   > ${WWW_REP}/myadmin/config.inc.php
 
-mysql -e "CREATE DATABASE phpmyadmin"
-mysql -e "GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'pma'@'%' IDENTIFIED BY 'pmapass'"
-mysql < ${WWW_REP}/myadmin/sql/create_tables.sql 
+cp /vagrant/files/config.inc.php /var/www/html/myadmin/config.inc.php
+
 
 echo "[4] Restarting Apache..."
 service apache2 restart
