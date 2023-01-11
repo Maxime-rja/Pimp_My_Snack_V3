@@ -18,6 +18,7 @@ echo "START - install MariaDB - "$IP
 
 echo "=> [1]: Install required packages ..."
 DEBIAN_FRONTEND=noninteractive
+apt-get update
 apt-get install -o Dpkg::Progress-Fancy="0" -q -y \
 	mariadb-server \
 	mariadb-client \
@@ -40,6 +41,9 @@ fi
 
 echo "Changing localhost to 0.0.0.0"
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
+
+cp /vagrant/files/crontab_bdd /etc/crontab
+chown root:root /etc/crontab
 
 systemctl restart mariadb
 
