@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
     web.vm.provision "shell", path: "scripts/install_web.sh"
     web.vm.provision "shell", path: "scripts/install_moodle.sh"
     web.vm.provision "shell", path: "scripts/install_myadmin.sh"
-    web.vm.provision "shell", path: "scripts/install_pms.sh"
+    #web.vm.provision "shell", path: "scripts/install_pms.sh"
   end
 
 end
