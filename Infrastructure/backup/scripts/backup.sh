@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo mysqldump --database phpmyadmin > /vagrant/backup/dump/sauvegarde-$(date +%Y%m%d).sql
+sudo mysqldump --databases phpmyadmin > /vagrant/backup/dump/sauvegarde-$(date +%Y%m%d).sql
 

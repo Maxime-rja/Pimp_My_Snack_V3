@@ -18,6 +18,7 @@ echo "START - install MariaDB - "$IP
 
 echo "=> [1]: Install required packages ..."
 DEBIAN_FRONTEND=noninteractive
+apt-get update
 apt-get install -o Dpkg::Progress-Fancy="0" -q -y \
 	mariadb-server \
 	mariadb-client \
