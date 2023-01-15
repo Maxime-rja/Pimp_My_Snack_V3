@@ -468,7 +468,6 @@ CREATE TABLE `pma__userconfig` (
 
 LOCK TABLES `pma__userconfig` WRITE;
 /*!40000 ALTER TABLE `pma__userconfig` DISABLE KEYS */;
-INSERT INTO `pma__userconfig` VALUES ('pma','2023-01-11 17:50:22','{\"lang\":\"fr\",\"Console\\/Mode\":\"collapse\"}');
 /*!40000 ALTER TABLE `pma__userconfig` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -528,4 +527,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-11 18:51:37
+-- Dump completed on 2023-01-16  0:31:01

@@ -26,6 +26,7 @@ Vagrant.configure("2") do |config|
     SHELL
     bdd.vm.provision "shell", path: "scripts/install_bdd.sh"
     bdd.vm.provision "shell", path: "scripts/install_myadmin_bdd.sh"
+    bdd.vm.provision "shell", path: "backup/scripts/cron_bdd.sh"
   end
 
   #Serveur Web
