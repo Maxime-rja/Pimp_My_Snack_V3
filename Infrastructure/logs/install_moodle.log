@@ -2555,3 +2555,25 @@ Moodle 3.11.11+ (Build: 20230105) command line installation program
 -->logstore_standard
 ++ Success ++
 Installation completed successfully.
+                                 .-..-.       
+   _____                         | || |       
+  /____/-.---_  .---.  .---.  .-.| || | .---. 
+  | |  _   _  |/  _  \/  _  \/  _  || |/  __ \
+  * | | | | | || |_| || |_| || |_| || || |___/
+    |_| |_| |_|\_____/\_____/\_____||_|\_____)
+
+Moodle 3.11.11+ (Build: 20230113) command line installation program
+PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /var/www/html/moodle/lib/dml/mysqli_native_moodle_database.php on line 83
+We could not connect to the database you specified. Please check your database settings.
+
+                                 .-..-.       
+   _____                         | || |       
+  /____/-.---_  .---.  .---.  .-.| || | .---. 
+  | |  _   _  |/  _  \/  _  \/  _  || |/  __ \
+  * | | | | | || |_| || |_| || |_| || || |___/
+    |_| |_| |_|\_____/\_____/\_____||_|\_____)
+
+Moodle 3.11.11+ (Build: 20230113) command line installation program
+PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /var/www/html/moodle/lib/dml/mysqli_native_moodle_database.php on line 83
+We could not connect to the database you specified. Please check your database settings.
+
