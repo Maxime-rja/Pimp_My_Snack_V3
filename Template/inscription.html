@@ -127,11 +127,16 @@
                 <div class="col-lg-9">
                     <div class="inscription-form bg-light rounded p-5">
                         <div id="success"></div>
-                        <form name="Inscription" id="inscriptionForm" novalidate="novalidate">                           
+                        <form name="Inscription" id="inscriptionForm" novalidate="novalidate">      
+                             <div class="col-sm-6 control-group">
+                                <input type="nom" class="form-control p-4" id="nom" placeholder="Nom" required="required" data-validation-required-message="Nom" />
+                                <p class="help-block text-danger"></p>
+                            </div>                     
                             <div class="col-sm-6 control-group">
                                 <input type="email" class="form-control p-4" id="email" placeholder="Email" required="required" data-validation-required-message="Email" />
                                 <p class="help-block text-danger"></p>
                             </div>
+                            
                             <div class="col-sm-6 control-group">
                                 <input type="mdp" class="form-control p-4" id="mdp" placeholder="Mot de passe" required="required" data-validation-required-message="Mot de passe" />
                                 <p class="help-block text-danger"></p>

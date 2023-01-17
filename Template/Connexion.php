@@ -30,6 +30,5 @@ include 'core/core.php';
         }
     }
 
-  
 
 ?>
