@@ -7,7 +7,7 @@
         $db = new PDO('mysql:host=localhost;dbname=my_recipes;charset=utf8','root','root');
     }
     
-    $prixIngredient[] ;
+    $prixIngredient;
 
     $nombreOignon = 1 ;
     $nombreCheddar = 1 ;
@@ -18,7 +18,7 @@
     $Coca = false;
     $Fanta = false;
 
-    $Frites = false;
+    $Frites = true;
     $OignonsRings = false;
         
 ?>
