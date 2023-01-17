@@ -37,13 +37,13 @@
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="">Support</a>
+                        <a class="text-white px-3" href="profil.html">Profil</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="contact.html">Contact</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="Connexion.html">Connexion</a>
+                        <a class="text-white px-3" href="connexion.html">Connexion</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="Inscription.html">Inscription</a>
+                        <a class="text-white px-3" href="inscription.html">Inscription</a>
                         
                     </div>
                 </div>
@@ -64,8 +64,8 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a class="text-white pl-3" href="">                            
-                            <img class="rounded bg-light" src="img/shopping-basket.png" style="width: 40px; height: 40px;">
+                        <a class="text-white pl-3" href="panier.html">                            
+                            <img class="rounded" src="img/shopping-basket.png" style="width: 30px; height: 30px;">                            
                         </a>
                     </div>
                 </div>
@@ -106,11 +106,11 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">Burger</h1>
+            <h1 class="text-white display-3 mt-lg-5">Pizza</h1>
             <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Burger</p>
+                <p class="m-0">Pizza</p>
             </div>
         </div>
     </div>
@@ -132,7 +132,7 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">0,5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">0,5€</h4> <!-- afficher le bon prix -->
                             </div>                            
                             <h5 class="font-weight-bold pl-3 pr-3">Oignon</h5>
                             
@@ -145,7 +145,7 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">1€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">1€</h4> <!-- afficher le bon prix -->
                             </div>                            
                             <h5 class="font-weight-bold pl-3 pr-3">Cheddar</h5>
                             <a href="" class="btn btn-sm btn-secondary">-</a>
@@ -157,7 +157,7 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">2.5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">2.5€</h4> <!-- afficher le bon prix -->
                             </div>                             
                             <h5 class="font-weight-bold pl-3 pr-3">Steak</h5>
                             <a href="" class="btn btn-sm btn-secondary">-</a>
@@ -169,7 +169,7 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4> <!-- afficher le bon prix -->
                             </div>                              
                             <h5 class="font-weight-bold pl-3 pr-3">Cornichon</h5>
                             <a href="" class="btn btn-sm btn-secondary">-</a>
@@ -181,7 +181,7 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4> <!-- afficher le bon prix -->
                             </div>                              
                             <h5 class="font-weight-bold pl-3 pr-3">Laitue</h5>
                             <a href="" class="btn btn-sm btn-secondary">-</a>
@@ -224,7 +224,7 @@
                     </div> 
                     <div class="col"> 
                         <div class="text-center">
-                        <img  src="img/Pain_inf.png" > <!-- image a afficher autant de fois qu'il y a d'ingredients -->  
+                        <img  src="img/Pain_inf.png" > 
                         </div>    
                   </div>               
                 </div>
@@ -239,7 +239,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Coca</h5>
                         <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné -->  
@@ -248,7 +248,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Fanta</h5>
                         <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
@@ -265,7 +265,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Frites</h5>
                         <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné -->                        
@@ -274,7 +274,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">oignons rings</h5>
                         <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
@@ -285,7 +285,7 @@
 
             <!-- recap start -->
             <div class="product-item d-flex align-items-center text-center bg-light rounded px-3">
-                <h1 class=" position-relative text-center mb-5">Récapitulatif de la commande :</h1>     
+                <h1 class=" position-relative text-center mb-5">Récapitulatif du menu :</h1>     
             </div>         
             <div class="product-item d-flex align-items-center text-center bg-light rounded px-3">                              
                 <h5 class="font-weight-bold pl-3 pr-3"> Total Burger : </h5>                        
@@ -304,10 +304,12 @@
                 <h3 class="font-weight-bold pl-3 pr-3"> Total : </h3>                        
                 <h3 class="font-weight-bold bg-primary text-white mb-0">7€</h3> <!-- afficher la somme des prix des ingredients -->
             </div>
-            
-            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded px-3">
-                <input type="image" id="image" href="Panier.html" alt="Panier" src="img/shopping-basket.png" style="width: 80px; height: 80px;">
-            </div>    
+
+            <div class="product-item d-flex align-items-center text-center bg-light rounded px-3"> 
+                <a href="panier.html" class="btn btn-sm btn-secondary"> Valider 
+                    <img class="rounded " src="img/shopping-basket.png" style="width: 40px; height: 40px;">                            
+                </a>
+            </div>
             <!-- recap end -->
         </div> 
     </div>    
@@ -331,14 +333,14 @@
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">+012 345 67890</p>
+                            <h5 class="font-weight-bold mb-2">Contactez Nous</h5>
+                            <p class="mb-2">10 Bd Jean Jeanneteau, 49100 Angers, FR</p>
+                            <p class="mb-0">02 41 86 67 67</p>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+                            <h5 class="font-weight-bold mb-2">Heures d'ouvertures</h5>
+                            <p class="mb-2">Lundi – Samedi, 8h – 23h</p>
+                            <p class="mb-0">Dimanche: Fermé</p>
                         </div>
                     </div>
                 </div>
