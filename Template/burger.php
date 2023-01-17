@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<?php
+    try
+    {
+        $db = new PDO('mysql:host=localhost;dbname=my_recipes;charset=utf8','root','root');
+    }
+    
+    $prixIngredient[] ;
+
+    $nombreOignon = 1 ;
+    $nombreCheddar = 1 ;
+    $nombreSteak = 1 ;
+    $nombreCornichon = 1 ;
+    $nombreLaitue = 1 ;
+
+    $Coca = false
+    $Fanta = false
+
+    $Frites = false
+    $OignonsRings = false    
+        
+?>
+
+
+<head>    
+
     <meta charset="utf-8">
     <title>PMS - Pymp My Snack</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -26,7 +50,8 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body>    
+    
     <!-- Topbar Start -->
     <div class="container-fluid bg-primary py-3 d-none d-md-block">
         <div class="container">
@@ -268,7 +293,13 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Frites</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné -->                        
+                        <?php if ($Frites == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Frites == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>                                    
+                                               
+
                     </div>
                 </div> 
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -276,7 +307,7 @@
                         <div class="bg-primary " style="width: 80px;">
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
-                        <h5 class="font-weight-bold pl-3 pr-3">oignons rings</h5>
+                        <h5 class="font-weight-bold pl-3 pr-3">Oignons Rings</h5>
                         <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
                     </div>
                 </div>                          
