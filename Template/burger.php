@@ -15,11 +15,11 @@
     $nombreCornichon = 1 ;
     $nombreLaitue = 1 ;
 
-    $Coca = false
-    $Fanta = false
+    $Coca = false;
+    $Fanta = false;
 
-    $Frites = false
-    $OignonsRings = false    
+    $Frites = false;
+    $OignonsRings = false;
         
 ?>
 
