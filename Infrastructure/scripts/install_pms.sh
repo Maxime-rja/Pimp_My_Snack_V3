@@ -25,7 +25,7 @@ else
   echo "Aucun fichier .html trouvé dans le dossier courant"
 fi
 
-#Cloning the git repertory 
+#Cloning the git repertory  
 sudo git clone --branch Dev https://github.com/Maxime-rja/Pimp_My_Snack_V3.git
 sleep 3
 
