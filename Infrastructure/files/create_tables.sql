@@ -17,9 +17,9 @@
 --
 -- Database : `phpmyadmin`
 --
-CREATE DATABASE IF NOT EXISTS `phpmyadmin`
+CREATE DATABASE IF NOT EXISTS `PimpMySnack`
   DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE phpmyadmin;
+USE PimpMySnack;
 
 -- --------------------------------------------------------
 
