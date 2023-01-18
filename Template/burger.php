@@ -13,8 +13,8 @@
 
     echo $nombreOignon;
 
-    $Coca = false;
-    $Fanta = false;
+    $Coca = "+";
+    $Fanta = "+";
 
     $Frites = true;
     $OignonsRings = false;
@@ -149,7 +149,7 @@
                 </div>
             </div>  
             <div class="row">
-                <form method="post">
+                <form method="get">
                 <div class="col"> 
                     <div class="row">
                         <div class="col">  
@@ -281,6 +281,7 @@
             <div class="row">
                 <h1 class=" position-relative text-center mb-5">Boissons</h1>
             </div>
+            <form method="get">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
@@ -288,11 +289,7 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Coca</h5>
-                        <?php if ($Coca == false){ ?> 
-                            <a class="btn btn-sm btn-secondary"> + </a>
-                        <?php } if ($Coca == true){ ?>    
-                            <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?>
+                        <input type = "button" class="btn btn-sm btn-secondary" name ="btnCoca" value=<?php $Coca ?>>                        
                     </div>
                 </div>  
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -301,14 +298,31 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Fanta</h5>
-                        <?php if ($Fanta == false){ ?> 
-                            <a class="btn btn-sm btn-secondary"> + </a>
-                        <?php } if ($Fanta == true){ ?>    
-                            <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?>
+                        <input type = "button" class="btn btn-sm btn-secondary" name ="btnFanta" value=<?php $Fanta ?> >
                     </div>
                 </div>  
             </div>
+            </form> 
+
+            <?php
+            if (isset($_GET['btnCoca'])) {
+                if ($Coca == "+") {
+                    $Coca = "X";
+                }
+                else{ 
+                    $Coca = "+";
+                }
+            }
+            if (isset($_GET['btnFanta'])) {
+                if ($Fanta == "+") {
+                    $Fanta = "X";
+                }
+                else{ 
+                    $Fanta = "+";
+                }
+            }
+            ?>
+
             <!-- Boissons End -->
 
             <!-- Accompagnement start -->
@@ -368,7 +382,7 @@
             </div>
 
             <div class="product-item d-flex align-items-center text-center bg-light rounded px-3"> 
-                <a href="panier.html" class="btn btn-sm btn-secondary"> Valider 
+                <a href="panier.php" class="btn btn-sm btn-secondary"> Valider 
                     <img class="rounded " src="img/shopping-basket.png" style="width: 40px; height: 40px;">                            
                 </a>
             </div>
