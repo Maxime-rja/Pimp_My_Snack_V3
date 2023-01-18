@@ -2,18 +2,16 @@
 <html lang="en">
 
 <?php
-    try
-    {
-        $db = new PDO('mysql:host=localhost;dbname=my_recipes;charset=utf8','root','root');
-    }
-    
+       
     $prixIngredient;
 
-    $nombreOignon = 1 ;
+    $nombreOignon = 2 ;
     $nombreCheddar = 1 ;
     $nombreSteak = 1 ;
     $nombreCornichon = 1 ;
     $nombreLaitue = 1 ;
+
+    echo $nombreOignon;
 
     $Coca = false;
     $Fanta = false;
@@ -62,13 +60,13 @@
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="profil.html">Profil</a>
+                        <a class="text-white px-3" href="profil.php">Profil</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="contact.html">Contact</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="connexion.html">Connexion</a>
+                        <a class="text-white px-3" href="connexion.php">Connexion</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="inscription.html">Inscription</a>
+                        <a class="text-white px-3" href="inscription.php">Inscription</a>
                         
                     </div>
                 </div>
@@ -111,15 +109,15 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         
-                        <a href="burger.html" class="nav-item nav-link">Burger</a>
-                        <a href="pizza.html" class="nav-item nav-link">Pizza</a>
+                        <a href="burger.php" class="nav-item nav-link">Burger</a>
+                        <a href="pizza.php" class="nav-item nav-link">Pizza</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Pymp</span> My Snack</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="wok.html" class="nav-item nav-link">Wok</a>
-                        <a href="sandwich.html" class="nav-item nav-link">Sandwich</a>
+                        <a href="wok.php" class="nav-item nav-link">Wok</a>
+                        <a href="sandwich.php" class="nav-item nav-link">Sandwich</a>
                     </div>
                 </div>
             </nav>
@@ -149,9 +147,9 @@
                 <div class="col-lg-6">
                     <h1 class="section-title position-relative text-center mb-5">Menu</h1>
                 </div>
-            </div>                  
-           
+            </div>  
             <div class="row">
+                <form method="post">
                 <div class="col"> 
                     <div class="row">
                         <div class="col">  
@@ -159,10 +157,10 @@
                             <div class="bg-primary " style="width: 80px;">
                                 <h4 class="font-weight-bold text-white mb-0">0,5€</h4> <!-- afficher le bon prix -->
                             </div>                            
-                            <h5 class="font-weight-bold pl-3 pr-3">Oignon</h5>
-                            
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <h5 class="font-weight-bold pl-3 pr-3">Oignon</h5>                            
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsOignon" value="-" >                                                           
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusOignon" value="+" >     
+                                                 
                         </div>
                         </div> 
                     </div>
@@ -173,8 +171,8 @@
                                 <h4 class="font-weight-bold text-white mb-0">1€</h4> <!-- afficher le bon prix -->
                             </div>                            
                             <h5 class="font-weight-bold pl-3 pr-3">Cheddar</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsCheddar" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusCheddar" value="+" >  
                         </div>
                         </div> 
                     </div>
@@ -185,8 +183,8 @@
                                 <h4 class="font-weight-bold text-white mb-0">2.5€</h4> <!-- afficher le bon prix -->
                             </div>                             
                             <h5 class="font-weight-bold pl-3 pr-3">Steak</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsSteak" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusSteak" value="+" >  
                         </div>
                         </div> 
                     </div>
@@ -197,8 +195,8 @@
                                 <h4 class="font-weight-bold text-white mb-0">0.5€</h4> <!-- afficher le bon prix -->
                             </div>                              
                             <h5 class="font-weight-bold pl-3 pr-3">Cornichon</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsCornichon" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusCornichon" value="+" >  
                         </div>
                         </div> 
                     </div>
@@ -209,52 +207,75 @@
                                 <h4 class="font-weight-bold text-white mb-0">0.5€</h4> <!-- afficher le bon prix -->
                             </div>                              
                             <h5 class="font-weight-bold pl-3 pr-3">Laitue</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsLaitue" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusLaitue" value="+" >  
                         </div>
                         </div> 
                     </div>
                 </div>
+                </form> 
+
+                <?php
+                if (isset($_GET['btnMoinsOignon'])){$nombreOignon--;}
+                if (isset($_GET['btnPlusOignon'])){$nombreOignon++;}
+                
+                if (isset($_GET['btnMoinsCheddar'])){$nombreCheddar--;}
+                if (isset($_GET['btnPlusCheddar'])){$nombreCheddar++;}
+
+                if (isset($_GET['btnMoinsSteak'])){$nombreSteak--;}
+                if (isset($_GET['btnPlusSteak'])){$nombreSteak++;}
+
+                if (isset($_GET['btnMoinsCornichon'])){$nombreCornichon--;}
+                if (isset($_GET['btnPlusCornichon'])){$nombreCornichon++;}
+                
+                if (isset($_GET['btnMoinsLaitue'])){$nombreLaitue--;}
+                if (isset($_GET['btnPlusLaitue'])){$nombreLaitue++;}   
+                ?>
 
                 <div class="col"> 
                     <div class="col">
                         <div class="text-center">
                         <img src="img/Pain_sup.png" >        
                         </div>                  
-                    </div>  
+                    </div>
+                    <?php for ($i = 0; $i < $nombreOignon;$i++) { ?>
                     <div class="col">
                         <div class="text-center">
                         <img  src="img/oignon.png" >   <!-- image a afficher autant de fois qu'il y a d'ingredients -->                    
                         </div>
                     </div>
+                    <?php } for ($i = 0; $i < $nombreCheddar;$i++) { ?>
                     <div class="col">
                         <div class="text-center">
                         <img src="img/Cheddar.png"> <!-- image a afficher autant de fois qu'il y a d'ingredients -->  
                         </div>                           
                     </div>  
+                    <?php } for ($i = 0; $i < $nombreSteak;$i++) { ?>
                     <div class="col">
                         <div class="text-center">
                         <img src="img/Steak.png">  <!-- image a afficher autant de fois qu'il y a d'ingredients -->  
                         </div>                          
                     </div> 
+                    <?php } for ($i = 0; $i < $nombreCornichon;$i++) { ?>
                     <div class="col">                    
                         <div class="text-center">        
                         <img  src="img/Cornichons.png" >   <!-- image a afficher autant de fois qu'il y a d'ingredients -->                         
                         </div>                         
                     </div> 
+                    <?php } for ($i = 0; $i < $nombreLaitue;$i++) { ?>
                     <div class="col"> 
                         <div class="text-center">
                         <img  src="img/laitue.png" >  <!-- image a afficher autant de fois qu'il y a d'ingredients -->                        
                         </div> 
                     </div> 
+                    <?php } ?>
                     <div class="col"> 
                         <div class="text-center">
                         <img  src="img/Pain_inf.png" > 
                         </div>    
                   </div>               
                 </div>
-            </div>  
-
+            </div>       
 
             <!-- Boissons Start -->
             <div class="row">
@@ -267,7 +288,11 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Coca</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné -->  
+                        <?php if ($Coca == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Coca == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>
                     </div>
                 </div>  
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -276,7 +301,11 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Fanta</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
+                        <?php if ($Fanta == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Fanta == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>
                     </div>
                 </div>  
             </div>
@@ -297,9 +326,7 @@
                             <a class="btn btn-sm btn-secondary"> + </a>
                         <?php } if ($Frites == true){ ?>    
                             <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?>                                    
-                                               
-
+                        <?php } ?> 
                     </div>
                 </div> 
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -308,7 +335,11 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Oignons Rings</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
+                        <?php if ($OignonsRings == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($OignonsRings == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>  
                     </div>
                 </div>                          
             </div>

@@ -27,8 +27,8 @@
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-primary py-3 d-none d-md-block">
+   <!-- Topbar Start -->
+   <div class="container-fluid bg-primary py-3 d-none d-md-block">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
@@ -37,13 +37,13 @@
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="profil.html">Profil</a>
+                        <a class="text-white px-3" href="profil.php">Profil</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="contact.html">Contact</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="connexion.html">Connexion</a>
+                        <a class="text-white px-3" href="connexion.php">Connexion</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="inscription.html">Inscription</a>
+                        <a class="text-white px-3" href="inscription.php">Inscription</a>
                         
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a class="text-white pl-3" href="panier.html">                            
+                        <a class="text-white pl-3" href="panier.php">                            
                             <img class="rounded" src="img/shopping-basket.png" style="width: 30px; height: 30px;">                            
                         </a>
                     </div>
@@ -86,22 +86,21 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         
-                        <a href="burger.html" class="nav-item nav-link">Burger</a>
-                        <a href="pizza.html" class="nav-item nav-link">Pizza</a>
+                        <a href="burger.php" class="nav-item nav-link">Burger</a>
+                        <a href="pizza.php" class="nav-item nav-link">Pizza</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Pymp</span> My Snack</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="wok.html" class="nav-item nav-link">Wok</a>
-                        <a href="sandwich.html" class="nav-item nav-link">Sandwich</a>
+                        <a href="wok.php" class="nav-item nav-link">Wok</a>
+                        <a href="sandwich.php" class="nav-item nav-link">Sandwich</a>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
-
 
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
