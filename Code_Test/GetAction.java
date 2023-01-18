@@ -2,15 +2,15 @@ import javax.swing.AbstractAction;
 
 public class GetAction extends AbstractAction
 {
-    private PimpMySnack fenetre;
+    IHMStockIngredient ihm_ingredient;
     private Ingredients ingredient;
     String text;
 
-    public GetAction(PimpMySnack fenetre, Ingredients ingredient, String text){
+    public GetAction(IHMStockIngredient ihm, Ingredients ingredient, String text){
  
         super(text);
         this.text = text;
-        this.fenetre = fenetre;
+        this.ihm_ingredient = ihm;
         this.ingredient = ingredient;
 	}
 
@@ -28,6 +28,6 @@ public class GetAction extends AbstractAction
             ingredient.retirerQuantiteIngredient(1);
         }
         
-        fenetre.getLabelStock(ingredient).setText(ingredient.toString());
+        ihm_ingredient.label_stock_ingredient.setText(ingredient.toString());
     }
 }
