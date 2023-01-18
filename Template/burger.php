@@ -62,13 +62,13 @@
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="profil.html">Profil</a>
+                        <a class="text-white px-3" href="profil.php">Profil</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="contact.html">Contact</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="connexion.html">Connexion</a>
+                        <a class="text-white px-3" href="connexion.php">Connexion</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="inscription.html">Inscription</a>
+                        <a class="text-white px-3" href="inscription.php">Inscription</a>
                         
                     </div>
                 </div>
@@ -111,15 +111,15 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         
-                        <a href="burger.html" class="nav-item nav-link">Burger</a>
-                        <a href="pizza.html" class="nav-item nav-link">Pizza</a>
+                        <a href="burger.php" class="nav-item nav-link">Burger</a>
+                        <a href="pizza.php" class="nav-item nav-link">Pizza</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Pymp</span> My Snack</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="wok.html" class="nav-item nav-link">Wok</a>
-                        <a href="sandwich.html" class="nav-item nav-link">Sandwich</a>
+                        <a href="wok.php" class="nav-item nav-link">Wok</a>
+                        <a href="sandwich.php" class="nav-item nav-link">Sandwich</a>
                     </div>
                 </div>
             </nav>
@@ -267,7 +267,11 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Coca</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné -->  
+                        <?php if ($Coca == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Coca == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>
                     </div>
                 </div>  
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -276,7 +280,11 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Fanta</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
+                        <?php if ($Fanta == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Fanta == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>
                     </div>
                 </div>  
             </div>
@@ -297,9 +305,7 @@
                             <a class="btn btn-sm btn-secondary"> + </a>
                         <?php } if ($Frites == true){ ?>    
                             <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?>                                    
-                                               
-
+                        <?php } ?> 
                     </div>
                 </div> 
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -308,7 +314,11 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Oignons Rings</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
+                        <?php if ($OignonsRings == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($OignonsRings == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>  
                     </div>
                 </div>                          
             </div>
