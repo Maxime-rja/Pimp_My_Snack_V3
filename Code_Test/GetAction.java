@@ -14,6 +14,7 @@ public class GetAction extends AbstractAction
         this.ingredient = ingredient;
 	}
 
+    /// Permet d'actualiser les ingrédients
     @Override
     public void actionPerformed(java.awt.event.ActionEvent e) {
         // TODO Auto-generated method stub
