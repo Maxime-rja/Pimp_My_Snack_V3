@@ -9,10 +9,10 @@
     session_start();
 
     //varible qui permet de faire des requetes sur bdd
-    $infoBdd = ['server' => 'localhost',
-    'login' => 'pwnd',
-    'password' => 'network',
-    'db_name' => 'projet', ];
+    $infoBdd = ['server' => 'srv-bdd',
+    'login' => 'pma',
+    'password' => 'pmapass',
+    'db_name' => 'PimpMySnack', ];
 
     $mysqli = new mysqli($infoBdd['server'], $infoBdd['login'],
     $infoBdd['password'],$infoBdd['db_name']);
