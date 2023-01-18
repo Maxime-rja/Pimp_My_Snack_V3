@@ -14,6 +14,11 @@ DEBIAN_FRONTEND=noninteractive
 
 echo "START - Install Base System on "$IP
 
+echo "UPDATE && UPGRADE"
+#preparation de l'upgrade de grub-pc, pour eviter l'interface graphique
+echo "grub-pc grub-pc/install_devices multiselect /dev/sda" | sudo debconf-set-selections
+sudo apt update && sudo apt upgrade -y
+
 echo "=> [1]: Installing required packages..."
 apt-get update $APT_OPT \
   >> $LOG_FILE 2>&1
@@ -22,6 +27,7 @@ apt-get install $APT_OPT \
   wget \
   gnupg \
   unzip \
+  vim \
   >> $LOG_FILE 2>&1
 
 echo "=> [2]: Server configuration"

@@ -353,3 +353,4 @@ CREATE TABLE IF NOT EXISTS `pma__export_templates` (
 )
   COMMENT='Saved export templates'
   DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+  

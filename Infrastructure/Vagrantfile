@@ -26,6 +26,7 @@ Vagrant.configure("2") do |config|
     SHELL
     bdd.vm.provision "shell", path: "scripts/install_bdd.sh"
     bdd.vm.provision "shell", path: "scripts/install_myadmin_bdd.sh"
+    bdd.vm.provision "shell", path: "backup/scripts/cron_bdd.sh"
   end
 
   #Serveur Web
@@ -55,6 +56,34 @@ Vagrant.configure("2") do |config|
     web.vm.provision "shell", path: "scripts/install_moodle.sh"
     web.vm.provision "shell", path: "scripts/install_myadmin.sh"
     web.vm.provision "shell", path: "scripts/install_pms.sh"
+  end
+
+   #Serveur Web Proxy
+   config.vm.define "srv-proxy" do |proxy|
+    proxy.vm.hostname = "srv-proxy"
+    proxy.vm.box = "chavinje/fr-bull-64"
+    proxy.vm.network :private_network, ip: "192.168.56.82"
+    # Un repertoire partagé est un plus mais demande beaucoup plus
+    # de travail - a voir à la fin
+    #machine.vm.synced_folder "./data", "/vagrant_data", SharedFoldersEnableSymlinksCreate: false
+
+    proxy.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--name", "srv-proxy"]
+      v.customize ["modifyvm", :id, "--groups", "/S7-projet"]
+      v.customize ["modifyvm", :id, "--cpus", "2"]
+      v.customize ["modifyvm", :id, "--memory", 2*1024]
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
+      v.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
+    end
+    config.vm.provision "shell", inline: <<-SHELL
+      sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config    
+      sleep 3
+      service ssh restart
+    SHELL
+    proxy.vm.provision "shell", path: "scripts/install_sys.sh"
+    proxy.vm.provision "shell", path: "scripts/install_web.sh"
+    proxy.vm.provision "shell", path: "proxy/scripts/proxy.sh"
+
   end
 
 end
