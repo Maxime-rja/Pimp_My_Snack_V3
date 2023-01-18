@@ -102,112 +102,81 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="section-title position-relative mb-5">Presentation de l'equipe</h1>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0 pb-5 pb-lg-0"></div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="owl-carousel team-carousel">
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/Clement.png" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Clément Revaud</h3>
-                                <h6 class="text-uppercase text-muted mb-4">LD</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/Maxime.png" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Maxime Rouja</h3>
-                                <h6 class="text-uppercase text-muted mb-4">CSS</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/Paul.png" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Paul Massé</h3>
-                                <h6 class="text-uppercase text-muted mb-4">CSS</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/Theo.png" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Théo Saindrenan</h3>
-                                <h6 class="text-uppercase text-muted mb-4">LD</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/jeremy.png" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Jérémy Sanchez-Cruz</h3>
-                                <h6 class="text-uppercase text-muted mb-4">LD</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-item">
-                            <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="img/Guilbaud.png" style="object-fit: cover;">
-                            </div>
-                            <div class="position-relative text-center bg-light rounded px-4 py-5" style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Maxime Guilbaud</h3>
-                                <h6 class="text-uppercase text-muted mb-4">LD</h6>
-                                <div class="d-flex justify-content-center pt-1">
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
 
-                
-
-                    </div>
-                </div>
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mt-lg-5">Panier</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">Panier</p>
             </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Header End -->
 
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h1 class="section-title position-relative text-center mb-5">Liste</h1>
+                </div>
+            </div>       
+            
+            <div class="col"> 
+                <div class="row">
+                    <div class="col">  
+                    <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary " style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">7,5€</h4> <!-- afficher le bon prix -->
+                        </div>                            
+                        <h5 class="font-weight-bold pl-3 pr-3">Menu 1</h5>
+                        
+                    </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col">  
+                    <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary " style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">8€</h4> <!-- afficher le bon prix -->
+                        </div>                            
+                        <h5 class="font-weight-bold pl-3 pr-3">Menu 2</h5>
+                    </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col">  
+                    <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
+                        <div class="bg-primary " style="width: 80px;">
+                            <h4 class="font-weight-bold text-white mb-0">5.5€</h4> <!-- afficher le bon prix -->
+                        </div>                             
+                        <h5 class="font-weight-bold pl-3 pr-3">Menu ...</h5>
+                    </div>
+                    </div> 
+                </div>
+               
+
+            <!-- recap start -->
+            <div class="product-item d-flex align-items-center text-center bg-light rounded px-3">
+                <h1 class=" position-relative text-center mb-5">Récapitulatif de la commande :</h1>     
+            </div> 
+            
+            <div class="product-item d-flex align-items-center text-center bg-light rounded px-3">                              
+                <h3 class="font-weight-bold pl-3 pr-3"> Total : </h3>                        
+                <h3 class="font-weight-bold bg-primary text-white mb-0">21€</h3> <!-- afficher la somme des prix des menus -->
+            </div>
+
+            <div class="product-item d-flex align-items-center text-center bg-light rounded px-3"> 
+                <a href="panier.html" class="btn btn-sm btn-secondary"> Payement </a>
+            </div>
+            <!-- recap end -->
+        </div> 
+    </div>    
+    <!-- Products End -->
 
     <!-- Footer Start -->
     <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
@@ -247,10 +216,8 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -268,5 +235,4 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>

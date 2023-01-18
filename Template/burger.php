@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<?php
+       
+    $prixIngredient;
+
+    $nombreOignon = 2 ;
+    $nombreCheddar = 1 ;
+    $nombreSteak = 1 ;
+    $nombreCornichon = 1 ;
+    $nombreLaitue = 1 ;
+
+    echo $nombreOignon;
+
+    $Coca = false;
+    $Fanta = false;
+
+    $Frites = true;
+    $OignonsRings = false;
+        
+?>
+
+
+<head>    
+
     <meta charset="utf-8">
     <title>PMS - Pymp My Snack</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -26,7 +48,8 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body>    
+    
     <!-- Topbar Start -->
     <div class="container-fluid bg-primary py-3 d-none d-md-block">
         <div class="container">
@@ -37,13 +60,13 @@
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="">Support</a>
+                        <a class="text-white px-3" href="profil.php">Profil</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="contact.html">Contact</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="Connexion.html">Connexion</a>
+                        <a class="text-white px-3" href="connexion.php">Connexion</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="Inscription.html">Inscription</a>
+                        <a class="text-white px-3" href="inscription.php">Inscription</a>
                         
                     </div>
                 </div>
@@ -64,8 +87,8 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a class="text-white pl-3" href="">                            
-                            <img class="rounded bg-light" src="img/shopping-basket.png" style="width: 40px; height: 40px;">
+                        <a class="text-white pl-3" href="panier.html">                            
+                            <img class="rounded" src="img/shopping-basket.png" style="width: 30px; height: 30px;">                            
                         </a>
                     </div>
                 </div>
@@ -86,15 +109,15 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         
-                        <a href="burger.html" class="nav-item nav-link">Burger</a>
-                        <a href="pizza.html" class="nav-item nav-link">Pizza</a>
+                        <a href="burger.php" class="nav-item nav-link">Burger</a>
+                        <a href="pizza.php" class="nav-item nav-link">Pizza</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Pymp</span> My Snack</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="wok.html" class="nav-item nav-link">Wok</a>
-                        <a href="sandwich.html" class="nav-item nav-link">Sandwich</a>
+                        <a href="wok.php" class="nav-item nav-link">Wok</a>
+                        <a href="sandwich.php" class="nav-item nav-link">Sandwich</a>
                     </div>
                 </div>
             </nav>
@@ -124,20 +147,20 @@
                 <div class="col-lg-6">
                     <h1 class="section-title position-relative text-center mb-5">Menu</h1>
                 </div>
-            </div>                  
-           
+            </div>  
             <div class="row">
+                <form method="post">
                 <div class="col"> 
                     <div class="row">
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">0,5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">0,5€</h4> <!-- afficher le bon prix -->
                             </div>                            
-                            <h5 class="font-weight-bold pl-3 pr-3">Oignon</h5>
-                            
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <h5 class="font-weight-bold pl-3 pr-3">Oignon</h5>                            
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsOignon" value="-" >                                                           
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusOignon" value="+" >     
+                                                 
                         </div>
                         </div> 
                     </div>
@@ -145,11 +168,11 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">1€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">1€</h4> <!-- afficher le bon prix -->
                             </div>                            
                             <h5 class="font-weight-bold pl-3 pr-3">Cheddar</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsCheddar" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusCheddar" value="+" >  
                         </div>
                         </div> 
                     </div>
@@ -157,11 +180,11 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">2.5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">2.5€</h4> <!-- afficher le bon prix -->
                             </div>                             
                             <h5 class="font-weight-bold pl-3 pr-3">Steak</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsSteak" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusSteak" value="+" >  
                         </div>
                         </div> 
                     </div>
@@ -169,11 +192,11 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4> <!-- afficher le bon prix -->
                             </div>                              
                             <h5 class="font-weight-bold pl-3 pr-3">Cornichon</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsCornichon" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusCornichon" value="+" >  
                         </div>
                         </div> 
                     </div>
@@ -181,55 +204,78 @@
                         <div class="col">  
                         <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                             <div class="bg-primary " style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4>
+                                <h4 class="font-weight-bold text-white mb-0">0.5€</h4> <!-- afficher le bon prix -->
                             </div>                              
                             <h5 class="font-weight-bold pl-3 pr-3">Laitue</h5>
-                            <a href="" class="btn btn-sm btn-secondary">-</a>
-                            <a href="" class="btn btn-sm btn-secondary">+</a>
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnMoinsLaitue" value="-" >
+                            <input type = "button" class="btn btn-sm btn-secondary" name ="btnPlusLaitue" value="+" >  
                         </div>
                         </div> 
                     </div>
                 </div>
+                </form> 
+
+                <?php
+                if (isset($_GET['btnMoinsOignon'])){$nombreOignon--;}
+                if (isset($_GET['btnPlusOignon'])){$nombreOignon++;}
+                
+                if (isset($_GET['btnMoinsCheddar'])){$nombreCheddar--;}
+                if (isset($_GET['btnPlusCheddar'])){$nombreCheddar++;}
+
+                if (isset($_GET['btnMoinsSteak'])){$nombreSteak--;}
+                if (isset($_GET['btnPlusSteak'])){$nombreSteak++;}
+
+                if (isset($_GET['btnMoinsCornichon'])){$nombreCornichon--;}
+                if (isset($_GET['btnPlusCornichon'])){$nombreCornichon++;}
+                
+                if (isset($_GET['btnMoinsLaitue'])){$nombreLaitue--;}
+                if (isset($_GET['btnPlusLaitue'])){$nombreLaitue++;}   
+                ?>
 
                 <div class="col"> 
                     <div class="col">
                         <div class="text-center">
                         <img src="img/Pain_sup.png" >        
                         </div>                  
-                    </div>  
+                    </div>
+                    <?php for ($i = 0; $i < $nombreOignon;$i++) { ?>
                     <div class="col">
                         <div class="text-center">
                         <img  src="img/oignon.png" >   <!-- image a afficher autant de fois qu'il y a d'ingredients -->                    
                         </div>
                     </div>
+                    <?php } for ($i = 0; $i < $nombreCheddar;$i++) { ?>
                     <div class="col">
                         <div class="text-center">
                         <img src="img/Cheddar.png"> <!-- image a afficher autant de fois qu'il y a d'ingredients -->  
                         </div>                           
                     </div>  
+                    <?php } for ($i = 0; $i < $nombreSteak;$i++) { ?>
                     <div class="col">
                         <div class="text-center">
                         <img src="img/Steak.png">  <!-- image a afficher autant de fois qu'il y a d'ingredients -->  
                         </div>                          
                     </div> 
+                    <?php } for ($i = 0; $i < $nombreCornichon;$i++) { ?>
                     <div class="col">                    
                         <div class="text-center">        
                         <img  src="img/Cornichons.png" >   <!-- image a afficher autant de fois qu'il y a d'ingredients -->                         
                         </div>                         
                     </div> 
+                    <?php } for ($i = 0; $i < $nombreLaitue;$i++) { ?>
                     <div class="col"> 
                         <div class="text-center">
                         <img  src="img/laitue.png" >  <!-- image a afficher autant de fois qu'il y a d'ingredients -->                        
                         </div> 
                     </div> 
+                    <?php } ?>
                     <div class="col"> 
                         <div class="text-center">
-                        <img  src="img/Pain_inf.png" > <!-- image a afficher autant de fois qu'il y a d'ingredients -->  
+                        <img  src="img/Pain_inf.png" > 
                         </div>    
                   </div>               
                 </div>
-            </div>  
-
+            </div>       
 
             <!-- Boissons Start -->
             <div class="row">
@@ -239,19 +285,27 @@
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Coca</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné -->  
+                        <?php if ($Coca == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Coca == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>
                     </div>
                 </div>  
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Fanta</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
+                        <?php if ($Fanta == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Fanta == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>
                     </div>
                 </div>  
             </div>
@@ -265,19 +319,27 @@
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Frites</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné -->                        
+                        <?php if ($Frites == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($Frites == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?> 
                     </div>
                 </div> 
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
                         <div class="bg-primary " style="width: 80px;">
-                            <h4 class="font-weight-bold text-white mb-0">99€</h4>
+                            <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
-                        <h5 class="font-weight-bold pl-3 pr-3">oignons rings</h5>
-                        <a href="" class="btn btn-sm btn-secondary">+</a> <!-- modifier "+" par "X" pour indiquer que l'element est selectionné --> 
+                        <h5 class="font-weight-bold pl-3 pr-3">Oignons Rings</h5>
+                        <?php if ($OignonsRings == false){ ?> 
+                            <a class="btn btn-sm btn-secondary"> + </a>
+                        <?php } if ($OignonsRings == true){ ?>    
+                            <a class="btn btn-sm btn-secondary"> X </a>                          
+                        <?php } ?>  
                     </div>
                 </div>                          
             </div>
@@ -285,7 +347,7 @@
 
             <!-- recap start -->
             <div class="product-item d-flex align-items-center text-center bg-light rounded px-3">
-                <h1 class=" position-relative text-center mb-5">Récapitulatif de la commande :</h1>     
+                <h1 class=" position-relative text-center mb-5">Récapitulatif du menu :</h1>     
             </div>         
             <div class="product-item d-flex align-items-center text-center bg-light rounded px-3">                              
                 <h5 class="font-weight-bold pl-3 pr-3"> Total Burger : </h5>                        
@@ -304,10 +366,12 @@
                 <h3 class="font-weight-bold pl-3 pr-3"> Total : </h3>                        
                 <h3 class="font-weight-bold bg-primary text-white mb-0">7€</h3> <!-- afficher la somme des prix des ingredients -->
             </div>
-            
-            <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded px-3">
-                <input type="image" id="image" href="Panier.html" alt="Panier" src="img/shopping-basket.png" style="width: 80px; height: 80px;">
-            </div>    
+
+            <div class="product-item d-flex align-items-center text-center bg-light rounded px-3"> 
+                <a href="panier.html" class="btn btn-sm btn-secondary"> Valider 
+                    <img class="rounded " src="img/shopping-basket.png" style="width: 40px; height: 40px;">                            
+                </a>
+            </div>
             <!-- recap end -->
         </div> 
     </div>    
@@ -331,14 +395,14 @@
                 <div class="col-12 mt-2 mb-4">
                     <div class="row">
                         <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
-                            <h5 class="font-weight-bold mb-2">Get In Touch</h5>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">+012 345 67890</p>
+                            <h5 class="font-weight-bold mb-2">Contactez Nous</h5>
+                            <p class="mb-2">10 Bd Jean Jeanneteau, 49100 Angers, FR</p>
+                            <p class="mb-0">02 41 86 67 67</p>
                         </div>
                         <div class="col-sm-6 text-center text-sm-left">
-                            <h5 class="font-weight-bold mb-2">Opening Hours</h5>
-                            <p class="mb-2">Mon – Sat, 8AM – 5PM</p>
-                            <p class="mb-0">Sunday: Closed</p>
+                            <h5 class="font-weight-bold mb-2">Heures d'ouvertures</h5>
+                            <p class="mb-2">Lundi – Samedi, 8h – 23h</p>
+                            <p class="mb-0">Dimanche: Fermé</p>
                         </div>
                     </div>
                 </div>
