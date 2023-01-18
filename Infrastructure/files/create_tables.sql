@@ -17,9 +17,9 @@
 --
 -- Database : `phpmyadmin`
 --
-CREATE DATABASE IF NOT EXISTS `PimpMySnack`
+CREATE DATABASE IF NOT EXISTS `phpmyadmin`
   DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE PimpMySnack;
+USE phpmyadmin;
 
 -- --------------------------------------------------------
 
@@ -353,3 +353,4 @@ CREATE TABLE IF NOT EXISTS `pma__export_templates` (
 )
   COMMENT='Saved export templates'
   DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+  
