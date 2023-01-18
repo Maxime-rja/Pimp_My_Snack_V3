@@ -1,61 +1,61 @@
 create table Profils (
-	id INTEGER,
-    Nom CHAR,
-	Prenom CHAR,
-	Mdp CHAR,
-	Email CHAR,
-	Points INTEGER,
-	Telephone CHAR
+	id int,
+    Nom char,
+	Prenom char,
+	Mdp char,
+	Email char,
+	Points int,
+	Telephone char,
     PRIMARY KEY (id)
 );
 
 create table Commandes (
-	id INTEGER,
-	Profil INTEGER,
-	Menu INTEGER,
-	TempsPrep INTEGER,
-	PointsGagne INTEGER,
-	Prix INTEGER,
-	Fait BOOLEAN,
+	id int,
+	Profil int,
+	Menu int,
+	TempsPrep int,
+	PointsGagne int,
+	Prix int,
+	Fait boolean,
 	PRIMARY KEY (id),
 	FOREIGN KEY (Profil) REFERENCES Profils (id),
 	FOREIGN KEY (Menu) REFERENCES Commandes-Menus (Commande) 
 ); 
 
 create table Menus (
-	id INTEGER,
-	Nom CHAR,
-	prix INTEGER,	
+	id int,
+	Nom char,
+	prix int,	
 	PRIMARY KEY (id)
 );
 
 
 create table Commande-Menus (
-	Menu INTEGER,
-	Commande INTEGER
+	Menu int,
+	Commande int,
 	FOREIGN KEY (Commande) REFERENCES Commandes (id),
 	FOREIGN KEY (Menu) REFERENCES Menus (id) 
 );
 
 
 create table Ingredients (
-	id INTEGER,
-	Nom CHAR,	
-	Quantite INTEGER,
-	Prix INTEGER,
+	id int,
+	Nom char,	
+	Quantite int,
+	Prix int,
 	PRIMARY KEY (id)
 );
 
 create table Menus-Ingredients (
-	Menu INTEGER,
-	Ingredient INTEGER,
+	Menu int,
+	Ingredient int,
 	FOREIGN KEY (Menu) REFERENCES Menus (id),
 	FOREIGN KEY (Ingredient) REFERENCES Ingredients (id)
 );
 
 create table Inventaire (
-	id INTEGER,
-	Nom CHAR,	
-	Quantite INTEGER,
+	id int,
+	Nom char,	
+	Quantite int,
 	PRIMARY KEY (id)
-);
+); 	 	
