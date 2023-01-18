@@ -12,7 +12,7 @@ DBNAME="moodle"
 DBUSER="moodle_user"
 DBPASSWD="network"
 #Fichier sql à injecter (présent dans un sous répertoire)
-DBFILE="files/creation_bdd.sql"
+DBFILE="files/backup/dump/latest-save.sql"
 
 echo "START - install MariaDB - "$IP
 
@@ -45,6 +45,8 @@ sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 
 sudo mkdir /usr/bin/backup
 sudo cp /vagrant/backup/scripts/backup.sh /usr/bin/backup/backup.sh
+apt install dos2unix
+dos2unix /usr/bin/backup/backup.sh
 
 systemctl restart mariadb
 
