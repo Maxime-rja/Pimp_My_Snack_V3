@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Ce code revient à utiliser la commande crontab -e et à modifier le fichier proposé en suivant
+#Cela permet d'automatiser de manière récurrente l'éxécution du script backup.sh placé dans le /usr/bin/backup/backup.sh
+
 guard_comment='# == my custom scheduler =='
 
 sudo crontab -l >mycron
