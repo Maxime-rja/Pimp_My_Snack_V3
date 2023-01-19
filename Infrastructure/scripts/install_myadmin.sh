@@ -43,6 +43,13 @@ sed -e "s|cfg\['blowfish_secret'\] = ''|cfg['blowfish_secret'] = '$randomBlowfis
   ${WWW_REP}/myadmin/config.sample.inc.php \
   > ${WWW_REP}/myadmin/config.inc.php
 
+
+## Nous pointons vers le serveur base de données depuis le serveur web. 
+#Pour cela nous avons copier le fichier présent à l'emplacement /var/www/html/myamdin/config.inc.php 
+#dans no fichiers locaux à l'emplacement /vagrant/files/config.inc.php
+#Nous avons ensuite modifier ce fichier avec un éditeur de code afin de pointer vers le serveur bdd
+#Puis nous collons ce fichier à son emplacement d'origine pour écraser le fichier intiallement installé
+
 cp /vagrant/files/config.inc.php /var/www/html/myadmin/config.inc.php
 
 
