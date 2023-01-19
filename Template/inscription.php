@@ -37,15 +37,13 @@
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-
-                        <a class="text-white px-3" href="profil.html">Profil</a>
+                        <a class="text-white px-3" href="profil.php">Profil</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="contact.html">Contact</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="connexion.html">Connexion</a>
+                        <a class="text-white px-3" href="connexion.php">Connexion</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="inscription.html">Inscription</a>
-
+                        <a class="text-white px-3" href="inscription.php">Inscription</a>
                         
                     </div>
                 </div>
@@ -66,9 +64,7 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-
-                        <a class="text-white pl-3" href="panier.html">                            
-
+                        <a class="text-white pl-3" href="panier.php">                            
                             <img class="rounded" src="img/shopping-basket.png" style="width: 30px; height: 30px;">                            
                         </a>
                     </div>
@@ -79,8 +75,7 @@
     <!-- Topbar End -->
 
 
-<!-- Navbar Start -->
-
+    <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
@@ -91,18 +86,15 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         
-                        <a href="burger.html" class="nav-item nav-link">Burger</a>
-                        <a href="pizza.html" class="nav-item nav-link">Pizza</a>
-
+                        <a href="burger.php" class="nav-item nav-link">Burger</a>
+                        <a href="pizza.php" class="nav-item nav-link">Pizza</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Pymp</span> My Snack</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-
-                        <a href="wok.html" class="nav-item nav-link">Wok</a>
-                        <a href="sandwich.html" class="nav-item nav-link">Sandwich</a>
-
+                        <a href="wok.php" class="nav-item nav-link">Wok</a>
+                        <a href="sandwich.php" class="nav-item nav-link">Sandwich</a>
                     </div>
                 </div>
             </nav>
@@ -113,50 +105,45 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">Contact</h1>
+            <h1 class="text-white display-3 mt-lg-5">Inscription</h1>
             <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Contact</p>
+                <p class="m-0">Inscription</p>
             </div>
         </div>
     </div>
     <!-- Header End -->
 
 
-    <!-- Contact Start -->
+    <!-- Connexion Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <h1 class="section-title position-relative text-center mb-5">Contact Us For Any Query</h1>
+                    <h1 class="section-title position-relative text-center mb-5">inscription</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <div class="contact-form bg-light rounded p-5">
+                    <div class="inscription-form bg-light rounded p-5">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                        <form name="Inscription" id="inscriptionForm" novalidate="novalidate">                           
+                            <div class="col-sm-6 control-group">
+                                <input type="email" class="form-control p-4" id="email" placeholder="Email" required="required" data-validation-required-message="Email" />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                            <div class="col-sm-6 control-group">
+                                <input type="mdp" class="form-control p-4" id="mdp" placeholder="Mot de passe" required="required" data-validation-required-message="Mot de passe" />
                                 <p class="help-block text-danger"></p>
                             </div>
+                            <div class="col-sm-6 control-group">
+                                <input type="mdp" class="form-control p-4" id="mdp2" placeholder="Répéter mot de passe" required="required" data-validation-required-message="Mot de passe 2" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                                                        
                             <div>
-                                <button class="btn btn-primary btn-block py-3 px-5" type="submit" id="sendMessageButton">Send Message</button>
+                                <button class="btn btn-primary btn-block py-3 px-5" type="submit" id="InscriptionButton">Inscription</button>
                             </div>
                         </form>
                     </div>
@@ -164,7 +151,7 @@
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Connexion End -->
 
 
     <!-- Footer Start -->
@@ -205,10 +192,8 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
