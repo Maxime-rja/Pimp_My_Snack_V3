@@ -58,6 +58,35 @@ Vagrant.configure("2") do |config|
     web.vm.provision "shell", path: "scripts/install_pms.sh"
   end
 
+  #Serveur Web
+  config.vm.define "srv-web-1" do |web1|
+    web1.vm.hostname = "srv-web-1"
+    web1.vm.box = "chavinje/fr-bull-64"
+    web1.vm.network :private_network, ip: "192.168.56.83"
+    # Un repertoire partagé est un plus mais demande beaucoup plus
+    # de travail - a voir à la fin
+    #machine.vm.synced_folder "./data", "/vagrant_data", SharedFoldersEnableSymlinksCreate: false
+
+    web1.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--name", "srv-web-1"]
+      v.customize ["modifyvm", :id, "--groups", "/S7-projet"]
+      v.customize ["modifyvm", :id, "--cpus", "2"]
+      v.customize ["modifyvm", :id, "--memory", 2*1024]
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
+      v.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
+    end
+    config.vm.provision "shell", inline: <<-SHELL
+      sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config    
+      sleep 3
+      service ssh restart
+    SHELL
+    web1.vm.provision "shell", path: "scripts/install_sys.sh"
+    web1.vm.provision "shell", path: "scripts/install_web.sh"
+    web1.vm.provision "shell", path: "scripts/install_moodle-1.sh"
+    web1.vm.provision "shell", path: "scripts/install_myadmin.sh"
+    web1.vm.provision "shell", path: "scripts/install_pms.sh"
+  end
+
    #Serveur Web Proxy
    config.vm.define "srv-proxy" do |proxy|
     proxy.vm.hostname = "srv-proxy"
