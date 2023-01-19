@@ -21,8 +21,8 @@ DEBIAN_FRONTEND=noninteractive
 
 #Ajout de apt-get update car durant le projet problème d'installation 
 #de maria-db à cause de cela ou du moins résolu grâce à cela
-
 apt-get update
+
 apt-get install -o Dpkg::Progress-Fancy="0" -q -y \
 	mariadb-server \
 	mariadb-client \
@@ -51,9 +51,11 @@ fi
 echo "Changing localhost to 0.0.0.0"
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
 
+#On redémarre mariadb pour rendre les changements effectifs
+systemctl restart mariadb
 
 ## 3.2 & 3.3 
-#Création du dossier à l'emplacement /usr/bin/backup dans lequel on copie un fichier que nous avons préalablement copié localement 
+#Création du dossier à l'emplacement /usr/bin/backup dans lequel on copie un fichier que nous avons préalablement modifié localement 
 #et qui comprend la commande de sauvegarde de la base de données 
 
 sudo mkdir /usr/bin/backup
@@ -67,7 +69,6 @@ apt install dos2unix
 dos2unix /usr/bin/backup/backup.sh
 
 #On redémarre mariadb pour rendre les changements effectifs
-
 systemctl restart mariadb
 
 
