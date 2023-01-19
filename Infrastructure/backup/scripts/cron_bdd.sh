@@ -11,7 +11,6 @@ echo "$guard_comment" >>mycron
 
 #echo "*/1 * * * * echo "Test du crontab" >>mycron
 echo "*/720 * * * * bash /usr/bin/backup/backup.sh" >>mycron #schedule the delete script
-echo "*/720 * * * * sudo mysqldump --databases phpmyadmin > /vagrant/backup/dump/latest-save.sql" >>mycron
 
 # install new cron file
 crontab mycron
