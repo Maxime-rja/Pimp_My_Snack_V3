@@ -1,42 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
-include 'core/core.php';
-
-    $_TITRE_PAGE = 'Inscription';
-
-
-    if(isset($_POST['inscription_submit']) && $_POST['inscription_submit'] == 1)
-    {
-    
-
-        //realescapestring -> que string
-        $inscription_NOM_escaped = $mysqli->real_escape_string(trim($_POST['Nom']));
-        $inscription_Prenom_escaped = $mysqli->real_escape_string(trim($_POST['Prenom']));
-        $inscription_mail_escaped = $mysqli->real_escape_string(trim($_POST['Email']));
-        $inscription_telephone_escaped = $mysqli->real_escape_string(trim($_POST['Telephone]')); 
-        $inscription_motDePasse_escaped = $mysqli->real_escape_string(trim($_POST['Mdp']));
-        $inscription_VerifMotDePasse_escaped = $mysqli->real_escape_string(trim($_POST['CMdp']));
-
-        $sql = "INSERT INTO Profils(nom,prenom, email, telephone, motDePasse)
-        VALUES ('".$inscription_NOM_escaped."', '".$inscription_Prenom_escaped."',
-        ".$inscription_telephone_escaped.", '".$inscription_mail_escaped."','".$inscription_motDePasse_escaped."' )
-        ";
-        
-        echo $sql;
-
-        //query f° a partir sqli d'exrcuter le param
-
-        $result = $mysqli->query($sql);
-
-        if (!$result) 
-        {
-            exit($mysqli->error);
-        }
-}
-?>
-
 <head>
     <meta charset="utf-8">
     <title>PMS - Pymp My Snack</title>
@@ -141,11 +105,11 @@ include 'core/core.php';
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3 mt-lg-5">Inscription</h1>
+            <h1 class="text-white display-3 mt-lg-5">Connexion</h1>
             <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Inscription</p>
+                <p class="m-0">Connexion</p>
             </div>
         </div>
     </div>
@@ -157,14 +121,14 @@ include 'core/core.php';
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <h1 class="section-title position-relative text-center mb-5">inscription</h1>
+                    <h1 class="section-title position-relative text-center mb-5">Connectez vous !</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <div class="inscription-form bg-light rounded p-5">
+                    <div class="connexion-form bg-light rounded p-5">
                         <div id="success"></div>
-                        <form name="Inscription" id="inscriptionForm" novalidate="novalidate">                           
+                        <form name="Connexion" id="connexionForm" novalidate="novalidate">                           
                             <div class="col-sm-6 control-group">
                                 <input type="email" class="form-control p-4" id="email" placeholder="Email" required="required" data-validation-required-message="Email" />
                                 <p class="help-block text-danger"></p>
@@ -173,13 +137,9 @@ include 'core/core.php';
                                 <input type="mdp" class="form-control p-4" id="mdp" placeholder="Mot de passe" required="required" data-validation-required-message="Mot de passe" />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="col-sm-6 control-group">
-                                <input type="mdp" class="form-control p-4" id="mdp2" placeholder="Répéter mot de passe" required="required" data-validation-required-message="Mot de passe 2" />
-                                <p class="help-block text-danger"></p>
-                            </div>
                                                         
                             <div>
-                                <button class="btn btn-primary btn-block py-3 px-5" type="submit" id="InscriptionButton">Inscription</button>
+                                <button class="btn btn-primary btn-block py-3 px-5" type="submit" id="ConnexionButton">Connexion</button>
                             </div>
                         </form>
                     </div>

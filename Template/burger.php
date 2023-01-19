@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-       
-    $prixIngredient;
+<?php       
+
+    // $dsn = 'mysql:host=ADRESSE_DU_SERVEUR;dbname=VOTRE_BASE_DE_DONNEES;port=VOTRE_PORT;charset=VOTRE_ENCODAGE';
+    // $pdo = new PDO($dsn, 'VOTRE_NOM_UTILISATEUR_SERVEUR' , 'VOTRE_MOT_DE_PASSE');
+
+    // $query = $pdo->query("SELECT Prix,Nom FROM Stockage");
+    // $prixIngredient = $query->fetchAll();
 
     $nombreOignon = 2 ;
     $nombreCheddar = 1 ;
@@ -13,12 +17,33 @@
 
     echo $nombreOignon;
 
-    $Coca = false;
-    $Fanta = false;
+    $Coca = "+";
+    $Fanta = "+";
 
-    $Frites = true;
-    $OignonsRings = false;
-        
+    $Frites = "+";
+    $OignonsRings = "+";
+
+    $Prix=0;
+
+    // if (isset($_GET['btnValider'])) 
+    // {
+    //     $query = $pdo->query("SELECT FIRST(Id) FROM Commande,Profils WHERE Profils.Id=? AND Profils.Id=Commandes.Profil AND Fait=false");
+    //     $Commande = $query->fetchAll();
+
+    //     if (count($Commande) == 0) //si vide
+    //     {
+    //         $query = $pdo->query("INSERT INTO Commandes (Profil, Fait,) VALUES ('?', 'false' )");
+
+    //         $query = $pdo->query("SELECT FIRST(Id) FROM Commande,Profils WHERE Profils.Id=? AND Profils.Id=Commandes.Profil AND Fait=false");
+    //         $Commande = $query->fetchAll();
+    //     }
+
+    //     $query = $pdo->query("INSERT INTO Menus (Nom, Prix,Commande)
+    //                                 VALUES ('Burger', '$Prix',$Commande)");
+
+    //     header('Status: 301 Moved Permanently', false, 301);
+    //     header('Location: /panier.php');
+    // }    
 ?>
 
 
@@ -149,7 +174,7 @@
                 </div>
             </div>  
             <div class="row">
-                <form method="post">
+                <form method="get">
                 <div class="col"> 
                     <div class="row">
                         <div class="col">  
@@ -281,6 +306,7 @@
             <div class="row">
                 <h1 class=" position-relative text-center mb-5">Boissons</h1>
             </div>
+            <form method="get">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
@@ -288,11 +314,7 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Coca</h5>
-                        <?php if ($Coca == false){ ?> 
-                            <a class="btn btn-sm btn-secondary"> + </a>
-                        <?php } if ($Coca == true){ ?>    
-                            <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?>
+                        <input type = "button" class="btn btn-sm btn-secondary" name ="btnCoca" value=<?php $Coca ?>>                        
                     </div>
                 </div>  
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -301,20 +323,38 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Fanta</h5>
-                        <?php if ($Fanta == false){ ?> 
-                            <a class="btn btn-sm btn-secondary"> + </a>
-                        <?php } if ($Fanta == true){ ?>    
-                            <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?>
+                        <input type = "button" class="btn btn-sm btn-secondary" name ="btnFanta" value=<?php $Fanta ?> >
                     </div>
                 </div>  
             </div>
+            </form> 
+
+            <?php
+            if (isset($_GET['btnCoca'])) {
+                if ($Coca == "+") {
+                    $Coca = "X";
+                }
+                else{ 
+                    $Coca = "+";
+                }
+            }
+            if (isset($_GET['btnFanta'])) {
+                if ($Fanta == "+") {
+                    $Fanta = "X";
+                }
+                else{ 
+                    $Fanta = "+";
+                }
+            }
+            ?>
+
             <!-- Boissons End -->
 
             <!-- Accompagnement start -->
             <div class="row">
                 <h1 class=" position-relative text-center mb-5">Accompagnement</h1>
             </div>
+            <form method="get">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
                     <div class="product-item d-flex align-items-center text-center bg-light rounded py-5 px-3">
@@ -322,11 +362,7 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                            
                         <h5 class="font-weight-bold pl-3 pr-3">Frites</h5>
-                        <?php if ($Frites == false){ ?> 
-                            <a class="btn btn-sm btn-secondary"> + </a>
-                        <?php } if ($Frites == true){ ?>    
-                            <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?> 
+                        <input type = "button" class="btn btn-sm btn-secondary" name ="btnFrites" value=<?php $Frites ?>>    
                     </div>
                 </div> 
                 <div class="col-lg-3 col-md-6 mb-4 pb-2">  
@@ -335,15 +371,31 @@
                             <h4 class="font-weight-bold text-white mb-0">99€</h4> <!-- afficher le bon prix -->
                         </div>                           
                         <h5 class="font-weight-bold pl-3 pr-3">Oignons Rings</h5>
-                        <?php if ($OignonsRings == false){ ?> 
-                            <a class="btn btn-sm btn-secondary"> + </a>
-                        <?php } if ($OignonsRings == true){ ?>    
-                            <a class="btn btn-sm btn-secondary"> X </a>                          
-                        <?php } ?>  
+                        <input type = "button" class="btn btn-sm btn-secondary" name ="btnOignonsRings" value=<?php $OignonsRings ?>>   
                     </div>
                 </div>                          
             </div>
+            </form> 
+            <?php
+            if (isset($_GET['btnFrites'])) {
+                if ($Frites == "+") {
+                    $Frites = "X";
+                }
+                else{ 
+                    $Frites = "+";
+                }
+            }
+            if (isset($_GET['btnOignonsRings'])) {
+                if ($OignonsRings == "+") {
+                    $OignonsRings = "X";
+                }
+                else{ 
+                    $OignonsRings = "+";
+                }
+            }
+            ?>
             <!-- Accompagnement End -->
+
 
             <!-- recap start -->
             <div class="product-item d-flex align-items-center text-center bg-light rounded px-3">
@@ -366,12 +418,12 @@
                 <h3 class="font-weight-bold pl-3 pr-3"> Total : </h3>                        
                 <h3 class="font-weight-bold bg-primary text-white mb-0">7€</h3> <!-- afficher la somme des prix des ingredients -->
             </div>
-
+            <form method="get">
             <div class="product-item d-flex align-items-center text-center bg-light rounded px-3"> 
-                <a href="panier.html" class="btn btn-sm btn-secondary"> Valider 
-                    <img class="rounded " src="img/shopping-basket.png" style="width: 40px; height: 40px;">                            
-                </a>
+                <input type = "image" src="img/shopping-basket.png" href="panier.php" style="width: 110px; height: 80px;"
+                 class="btn btn-sm btn-secondary" name ="btnValider" >  
             </div>
+            </form>
             <!-- recap end -->
         </div> 
     </div>    
