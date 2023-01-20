@@ -1,3 +1,38 @@
+<?php 
+include 'core/core.php';
+
+    $_TITRE_PAGE = 'Connexion';
+    
+    
+    if(isset($_POST['connexion_submit']) && $_POST['connexion_submit'] == 1)
+    {
+        $mail_escaped = $mysqli->real_escape_string(trim($_POST['Email']));
+        $password_escaped = $mysqli->real_escape_string(trim($_POST['Mdp']));
+        $sql = "SELECT id
+        FROM Profils
+        WHERE Email = '".$mail_escaped."'
+        AND Mdp = '".$password_escaped."'";
+        echo $sql;
+        //query f° a partir sqli d'exrcuter le param
+        $result = $mysqli->query($sql);
+
+        if (!$result) 
+        {
+            exit($mysqli->error);
+        }
+
+        $nb = $result -> num_rows;
+        if($nb)
+        {
+            //récupérationde l'id de l'étudiant 
+            $row = $result->fetch_assoc();
+            $_SESSION['compte'] = $row['id'];
+        }
+    }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,13 +72,13 @@
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="">Help</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="profil.php">Profil</a>
+                        <a class="text-white px-3" href="profil.html">Profil</a>
                         <span class="text-white">|</span>
                         <a class="text-white px-3" href="contact.html">Contact</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="connexion.php">Connexion</a>
+                        <a class="text-white px-3" href="connexion.html">Connexion</a>
                         <span class="text-white">|</span>
-                        <a class="text-white px-3" href="inscription.php">Inscription</a>
+                        <a class="text-white px-3" href="inscription.html">Inscription</a>
                         
                     </div>
                 </div>
@@ -64,7 +99,7 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a class="text-white pl-3" href="panier.php">                            
+                        <a class="text-white pl-3" href="panier.html">                            
                             <img class="rounded" src="img/shopping-basket.png" style="width: 30px; height: 30px;">                            
                         </a>
                     </div>
@@ -74,8 +109,7 @@
     </div>
     <!-- Topbar End -->
 
-
-    <!-- Navbar Start -->
+<!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
@@ -86,15 +120,15 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         
-                        <a href="burger.php" class="nav-item nav-link">Burger</a>
-                        <a href="pizza.php" class="nav-item nav-link">Pizza</a>
+                        <a href="burger.html" class="nav-item nav-link">Burger</a>
+                        <a href="pizza.html" class="nav-item nav-link">Pizza</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Pymp</span> My Snack</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="wok.php" class="nav-item nav-link">Wok</a>
-                        <a href="sandwich.php" class="nav-item nav-link">Sandwich</a>
+                        <a href="wok.html" class="nav-item nav-link">Wok</a>
+                        <a href="sandwich.html" class="nav-item nav-link">Sandwich</a>
                     </div>
                 </div>
             </nav>
@@ -128,7 +162,8 @@
                 <div class="col-lg-9">
                     <div class="connexion-form bg-light rounded p-5">
                         <div id="success"></div>
-                        <form name="Connexion" id="connexionForm" novalidate="novalidate">                           
+                        <form name="Connexion" id="connexionForm" novalidate="novalidate">     
+                            <center>                     
                             <div class="col-sm-6 control-group">
                                 <input type="email" class="form-control p-4" id="email" placeholder="Email" required="required" data-validation-required-message="Email" />
                                 <p class="help-block text-danger"></p>
@@ -137,10 +172,11 @@
                                 <input type="mdp" class="form-control p-4" id="mdp" placeholder="Mot de passe" required="required" data-validation-required-message="Mot de passe" />
                                 <p class="help-block text-danger"></p>
                             </div>
-                                                        
+                        </center>                    
                             <div>
                                 <button class="btn btn-primary btn-block py-3 px-5" type="submit" id="ConnexionButton">Connexion</button>
                             </div>
+                            <center><a href = "inscription.html">Vous n'avez pas encore de compte ? Inscrivez-vous dès maintenant !</a></center>
                         </form>
                     </div>
                 </div>

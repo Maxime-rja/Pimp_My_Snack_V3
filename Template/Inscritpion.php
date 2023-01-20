@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php 
 include 'core/core.php';
 
@@ -36,6 +33,11 @@ include 'core/core.php';
         }
 }
 ?>
+
+
+
+<!DOCTYPE html>
+<html lang="en"> 
 
 <head>
     <meta charset="utf-8">
@@ -164,9 +166,22 @@ include 'core/core.php';
                 <div class="col-lg-9">
                     <div class="inscription-form bg-light rounded p-5">
                         <div id="success"></div>
-                        <form name="Inscription" id="inscriptionForm" novalidate="novalidate">                           
+                        <form name="Inscription" id="inscriptionForm" novalidate="novalidate">     
+                        <center>      
+                        <div class="col-sm-6 control-group">
+                                <input type="nom" class="form-control p-4" id="nom" placeholder="Nom" required="required" data-validation-required-message="Nom" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="col-sm-6 control-group">
+                                <input type="prenom" class="form-control p-4" id="prenom" placeholder="Prenom" required="required" data-validation-required-message="Prenom" />
+                                <p class="help-block text-danger"></p>
+                            </div>
                             <div class="col-sm-6 control-group">
                                 <input type="email" class="form-control p-4" id="email" placeholder="Email" required="required" data-validation-required-message="Email" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="col-sm-6 control-group">
+                                <input type="telephone" class="form-control p-4" id="telephone" placeholder="Numero de telephone" required="required" data-validation-required-message="Telephone" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="col-sm-6 control-group">
@@ -177,10 +192,12 @@ include 'core/core.php';
                                 <input type="mdp" class="form-control p-4" id="mdp2" placeholder="Répéter mot de passe" required="required" data-validation-required-message="Mot de passe 2" />
                                 <p class="help-block text-danger"></p>
                             </div>
+                        </center>
                                                         
                             <div>
                                 <button class="btn btn-primary btn-block py-3 px-5" type="submit" id="InscriptionButton">Inscription</button>
                             </div>
+                            <center><a href = "inscription.html">Vous avez déjà un compte ? Connectez-vous dès maintenant !</a></center>
                         </form>
                     </div>
                 </div>
