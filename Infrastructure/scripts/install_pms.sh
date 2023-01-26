@@ -31,7 +31,7 @@ else
 fi
 
 #Utilisation de la commande GIT pour cloner le repertoire dev dans le repertoire /var/www/html
-sudo git clone --branch Main-Infra-Dev https://github.com/Maxime-rja/Pimp_My_Snack_V3.git
+sudo git clone --branch Dev https://github.com/Maxime-rja/Pimp_My_Snack_V3.git
 sleep 3
 
 #Copie du dossier Template dans /var/www/html pour que le serveur web pointe directement vers notre index.html
