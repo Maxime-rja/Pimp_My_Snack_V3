@@ -20,7 +20,7 @@ cd /var/www/html
 #Recherche de fichier en .html 
 #Si il existe des fichiers .html -> on supprime (pour eviter les conflits) sinon rien 
 #Si il existe des repertoires de la version du site déployé précedemment -> on supprime (pour eviter les conflits) 
-files=`ls -1 *.html 2>/dev/null` 
+files=`ls -1 *.html 2>/Main-Infra-Dev/null` 
 if [ -n "$files" ]; then
   rm -f $files
   sleep 3
