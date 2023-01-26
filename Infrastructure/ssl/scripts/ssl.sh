@@ -3,9 +3,9 @@
 sudo apt install -y git
 sudo apt install -y curl git
 
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.1
+sudo git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.1
 
-cp /vagrant/ssl/.bashrc /root/
+cp /vagrant/ssl/.bashrc /root/.bashrc
 
 
 asdf plugin add mkcert https://github.com/salasrod/asdf-mkcert.git

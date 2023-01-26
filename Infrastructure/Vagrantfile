@@ -112,7 +112,7 @@ Vagrant.configure("2") do |config|
     proxy.vm.provision "shell", path: "scripts/install_sys.sh"
     proxy.vm.provision "shell", path: "scripts/install_web.sh"
     proxy.vm.provision "shell", path: "proxy/scripts/proxy.sh"
-    proxy.vm.provision "shell", path: "ssl/scripts/ssl.sh"
+    #proxy.vm.provision "shell", path: "ssl/scripts/ssl.sh"
 
   end
 
