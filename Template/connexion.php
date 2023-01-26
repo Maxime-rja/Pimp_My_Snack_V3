@@ -1,3 +1,4 @@
+
 <?php 
 include 'core/core.php';
 
@@ -29,9 +30,8 @@ include 'core/core.php';
             $_SESSION['compte'] = $row['id'];
         }
     }
-
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
