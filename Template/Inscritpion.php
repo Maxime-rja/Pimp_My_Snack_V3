@@ -12,7 +12,7 @@ include 'core/core.php';
         $inscription_NOM_escaped = $mysqli->real_escape_string(trim($_POST['Nom']));
         $inscription_Prenom_escaped = $mysqli->real_escape_string(trim($_POST['Prenom']));
         $inscription_mail_escaped = $mysqli->real_escape_string(trim($_POST['Email']));
-        $inscription_telephone_escaped = $mysqli->real_escape_string(trim($_POST['Telephone]')); 
+        $inscription_telephone_escaped = $mysqli->real_escape_string(trim($_POST['Telephone'])); 
         $inscription_motDePasse_escaped = $mysqli->real_escape_string(trim($_POST['Mdp']));
         $inscription_VerifMotDePasse_escaped = $mysqli->real_escape_string(trim($_POST['CMdp']));
 
