@@ -6,6 +6,7 @@ sudo a2enmod proxy
 sudo a2enmod proxy_balancer
 sudo a2enmod proxy_ajp
 sudo a2enmod lbmethod_byrequests
+sudo a2enmod headers
 
 #On redémarre apache2
 systemctl restart apache2 

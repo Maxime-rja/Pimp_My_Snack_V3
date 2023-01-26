@@ -20,7 +20,7 @@ cd /var/www/html
 #Recherche de fichier en .html 
 #Si il existe des fichiers .html -> on supprime (pour eviter les conflits) sinon rien 
 #Si il existe des repertoires de la version du site déployé précedemment -> on supprime (pour eviter les conflits) 
-files=`ls -1 *.html 2>/dev/null` 
+files=`ls -1 *.html 2>/Main-Infra-Dev/null` 
 if [ -n "$files" ]; then
   rm -f $files
   sleep 3
@@ -31,7 +31,7 @@ else
 fi
 
 #Utilisation de la commande GIT pour cloner le repertoire dev dans le repertoire /var/www/html
-sudo git clone --branch Dev https://github.com/Maxime-rja/Pimp_My_Snack_V3.git
+sudo git clone --branch Main-Infra-Dev https://github.com/Maxime-rja/Pimp_My_Snack_V3.git
 sleep 3
 
 #Copie du dossier Template dans /var/www/html pour que le serveur web pointe directement vers notre index.html
