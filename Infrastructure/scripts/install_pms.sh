@@ -40,3 +40,5 @@ sudo cp -r /var/www/html/Pimp_My_Snack_V3/Template/* /var/www/html/
 #Reboot du serveur web
 echo "Restarting Apache..."
 service apache2 restart
+
+
