@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
     web.vm.provision "shell", path: "scripts/install_pms.sh"
   end
 
-  #Serveur Web
+  #Serveur Web-1
   config.vm.define "srv-web-1" do |web1|
     web1.vm.hostname = "srv-web-1"
     web1.vm.box = "chavinje/fr-bull-64"
@@ -112,8 +112,10 @@ Vagrant.configure("2") do |config|
     proxy.vm.provision "shell", path: "scripts/install_sys.sh"
     proxy.vm.provision "shell", path: "scripts/install_web.sh"
     proxy.vm.provision "shell", path: "proxy/scripts/proxy.sh"
-    #proxy.vm.provision "shell", path: "ssl/scripts/ssl.sh"
 
+    proxy.vm.provision "shell", path: "ssl/scripts/add_certificates.sh"
+    #proxy.vm.provision "shell", path: "ssl/scripts/ssl.sh"
+    #proxy.vm.provision "shell", path: "ssl/scripts/install.sh"
   end
 
 end
