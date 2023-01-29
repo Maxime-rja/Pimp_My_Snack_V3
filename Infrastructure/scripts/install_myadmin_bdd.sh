@@ -18,9 +18,9 @@ MYADMIN_VERSION="5.1.1"
 #Puis nous avons copier le fichier create-tables.sql dans le dossier sql et l'avons collé dans nos fichiers locaux dans le dossier /files
 #Et nous précisons le chemin vers ce fichier pour la création de la bdd ci-dessous
 
-mysql -e "CREATE DATABASE phpmyadmin" \
+mysql -e "CREATE DATABASE pimpmysnack" \
 >> $LOG_FILE 2>&1
-  mysql -e "GRANT ALL PRIVILEGES ON phpmyadmin.* TO 'pma'@'%' IDENTIFIED BY 'pmapass'"
+  mysql -e "GRANT ALL PRIVILEGES ON pimpmysnack.* TO 'pma'@'%' IDENTIFIED BY 'pmapass'"
   mysql < /vagrant/files/create_tables.sql
 >> $LOG_FILE 2>&1
 
