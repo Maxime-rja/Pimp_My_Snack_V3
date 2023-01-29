@@ -19,9 +19,9 @@
 -- Current Database: `phpmyadmin`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `phpmyadmin` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `pimpmysnack` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
-USE `phpmyadmin`;
+USE `pimpmysnack`;
 
 --
 -- Table structure for table `pma__bookmark`
@@ -529,4 +529,3 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2023-01-27 15:00:03
-
